@@ -1,0 +1,110 @@
+/* 
+  Універсальний селектор
+  Селектор тега
+  Селектор id
+  Селектор класа
+  Селектор нащадка
+  Дочірній селектор
+*/
+
+/* Універсальний селектор */
+/* 
+* {
+  color: teal;
+} 
+*/
+
+/* Селектор тега */
+/* h1 {
+  color: teal;
+}
+
+p {
+  color: yellowgreen;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+} */
+
+/* Селектор id */
+/* #page-title {
+  color: teal;
+}
+
+#description,
+#secondary-description {
+  color: yellowgreen;
+} */
+
+/* Селектор класа */
+/* .main-title {
+  color: teal;
+}
+
+.description {
+  color: yellowgreen;
+} */
+
+/* Селектор нащадка */
+/* .section-title {
+  font-size: 32px;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+} */
+
+/* .hero .section-title {
+  color: teal;
+} */
+
+/* .hero-section-title {
+  color: teal;
+} */
+
+/* .about .section-title {
+  color: tomato;
+} */
+
+/* .about-section-title {
+  color: tomato;
+} */
+
+/* Дочірній селектор */
+/* .menu > .item {
+  border: 1px solid tomato;
+} */
+
+/* Каскадність */
+/* 1 */
+/* h1 {
+  color: teal;
+} */
+
+/* 10 */
+/* .main-title {
+  color: tomato;
+} */
+
+/* 100 */
+/* #page-title {
+  color: yellowgreen;
+} */
+
+/* 0002 */
+/* body h1 {
+  color: aqua;
+} */
+
+/* Наслідування */
+body {
+  color: teal;
+}
+
+.description {
+  color: tomato;
+}
