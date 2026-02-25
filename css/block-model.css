@@ -1,0 +1,87 @@
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.products {
+  background-color: teal;
+}
+
+.section-paddings {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container {
+  width: 1168px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-header {
+  background-color: teal;
+}
+
+/* 
+  2n - even
+    2 * 0 = 0;
+    2 * 1 = 2;
+    2 * 2 = 4;
+    2 * 3 = 6;
+
+  2n + 1 - odd
+    2 * 0 + 1 = 1;
+    2 * 1 + 1 = 3;
+    2 * 2 + 1 = 5;
+
+  -n + 3
+    -0 + 3 = 3;
+    -1 + 3 = 2;
+    -2 + 3 = 1;
+*/
+
+.products-list-item:nth-child(even) .products-list-img {
+  border: 1px solid yellowgreen;
+}
