@@ -9,14 +9,36 @@
 /* ================== /VARIABLES ================== */
 
 /* ================== COMMON STYLES ================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 ul,
 ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
   list-style-type: none;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
 }
 
 body {
@@ -49,9 +71,27 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.container {
+  width: 1168px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-paddings {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 /* ================== /COMMON STYLES ================== */
 
 /* ================== PAGE HEADER STYLES ================== */
+.page-navigation {
+  display: flex;
+  align-items: center;
+}
+
 .page-logo {
   font-weight: 700;
   font-size: 18px;
@@ -59,11 +99,20 @@ body {
   letter-spacing: -0.03em;
 }
 
+.page-menu {
+  display: flex;
+  column-gap: 24px;
+  margin-left: auto;
+}
+
 .page-menu-link {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: -0.02em;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .page-menu-link:hover,
@@ -73,19 +122,47 @@ body {
 /* ================== /PAGE HEADER STYLES ================== */
 
 /* ================== HERO STYLES ================== */
+.hero-section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  background-color: rgb(30 24 35);
+  color: rgb(var(--secondary-text-color));
+  margin-bottom: 50px;
+}
+
+.hero-section-container {
+  padding-top: 381px;
+  padding-bottom: 40px;
+  padding-left: 56px;
+  padding-right: 56px;
+}
+
 .main-title {
+  max-width: 484px;
   font-size: 28px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.03em;
+  margin-bottom: 32px;
+}
+
+.hero-bottom-content {
+  display: flex;
+  align-items: center;
 }
 
 .buy-now-btn {
+  min-width: 144px;
+  padding: 14px 40px;
+  margin-right: 14px;
   font-size: 14px;
   font-weight: 600;
   background-color: rgb(var(--accent-color));
   color: rgb(var(--secondary-text-color));
   border: none;
+  border-radius: 100px;
 }
 
 .buy-now-btn:hover,
@@ -95,16 +172,24 @@ body {
 }
 
 .how-made-link {
+  display: block;
+  min-width: 183px;
+  padding: 14px 20px;
   font-size: 14px;
   font-weight: 600;
+  text-align: center;
+  border: 1px solid #ffffff;
+  border-radius: 100px;
 }
 
 .how-made-link:hover,
 .how-made-link:focus {
   color: rgb(var(--accent-color));
+  border-color: rgb(var(--accent-color));
 }
 
 .scroll-down-link {
+  margin-left: auto;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.3;
@@ -118,24 +203,82 @@ body {
 /* ================== /HERO STYLES ================== */
 
 /* ================== BENEFITS STYLES ================== */
+.benefits-section {
+  color: rgb(var(--secondary-text-color));
+  background-color: #1e1823;
+  margin-bottom: 50px;
+}
+
+.benefits-list {
+  display: flex;
+  column-gap: 88px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.benefits-list-item {
+  width: calc((100% - 2 * 88px) / 3);
+}
+
 .benefits-list-title {
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 18px;
 }
 
 .benefits-list-text {
   font-size: 14px;
   line-height: 1.3;
   letter-spacing: -0.02em;
+  color: rgb(var(--secondary-text-color) / 0.7);
 }
 /* ================== /BENEFITS STYLES ================== */
 
 /* ================== INGREDIENTS STYLES ================== */
+.ingredients-section-title {
+  max-width: 411px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 28px;
+}
+
 .ingredients-description {
+  max-width: 486px;
   font-size: 14px;
   line-height: 1.3;
   letter-spacing: -0.02em;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 54px;
+}
+
+.ingredients-list {
+  display: flex;
+  column-gap: 24px;
+}
+
+.ingredients-list-item {
+  width: calc((100% - 3 * 24px) / 4);
+  padding: 28px 32px;
+  border: 1px solid rgb(var(--accent-color));
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.ingredients-list-item:nth-child(4n + 1) {
+  background-color: rgb(var(--accent-color));
+  color: #ffffff;
+}
+
+.ingredients-list-item:nth-child(4n + 3) {
+  background-color: #1e1823;
+  border-color: #1e1823;
+  color: #ffffff;
+}
+
+.ingredients-list-img {
+  margin-bottom: 36px;
 }
 
 .ingredients-list-title {
@@ -148,10 +291,32 @@ body {
 /* ================== /INGREDIENTS STYLES ================== */
 
 /* ================== HOW MADE STYLES ================== */
+.how-made-section-title {
+  margin-bottom: 50px;
+}
+
+.how-made-content-wrapper {
+  display: flex;
+  column-gap: 20px;
+}
+
+.how-made-text-content {
+  flex-grow: 1;
+  padding: 32px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+}
+
 .how-made-title {
+  max-width: 350px;
   font-size: 18px;
   font-weight: 600;
   line-height: 1.3;
+  margin-bottom: 32px;
+}
+
+.how-made-list {
+  padding-right: 26px;
 }
 
 .how-made-list-item {
@@ -159,14 +324,43 @@ body {
   line-height: 1.3;
   letter-spacing: -0.02em;
 }
+
+.how-made-list-item:not(:last-child) {
+  margin-bottom: 24px;
+}
 /* ================== /HOW MADE STYLES ================== */
 
 /* ================== REVIEWS STYLES ================== */
+.reviews-section {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.reviews-section-title {
+  margin-bottom: 91px;
+}
+
+.reviews-list {
+  display: flex;
+  column-gap: 28px;
+  margin-bottom: 50px;
+}
+
+.reviews-list-item {
+  width: calc((100% - 28px * 2) / 3);
+  padding: 56px 24px 24px 24px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
+  background-color: rgb(255 255 255);
+}
+
 .reviews-list-fullname {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.3;
   text-align: center;
+  margin-bottom: 24px;
 }
 
 .reviews-list-text {
@@ -178,8 +372,16 @@ body {
 }
 
 .leave-review-btn {
+  display: block;
+  min-width: 222px;
   font-size: 18px;
   font-weight: 600;
+  background-color: transparent;
+  border: 1px solid #fd9222;
+  border-radius: 100px;
+  padding: 14px 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .leave-review-btn:hover,
@@ -190,17 +392,40 @@ body {
 /* ================== /REVIEWS STYLES ================== */
 
 /* ================== FOOTER STYLES ================== */
+.page-footer {
+  background-color: rgb(30, 24, 35);
+  color: rgb(var(--secondary-text-color));
+}
+
+.page-footer-top-block {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
 .page-footer-title {
+  max-width: 300px;
   font-size: 28px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
 
+.page-footer-contact {
+  font-style: normal;
+}
+
 .contact-slogan {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.3;
+  margin-bottom: 14px;
+}
+
+.contact-list-item:not(:last-child) {
+  margin-bottom: 4px;
 }
 
 .contact-list-link {
@@ -213,4 +438,9 @@ body {
 .contact-list-link:focus {
   color: rgb(var(--accent-color));
 }
+
+.page-footer-menu {
+  margin-left: 0;
+}
+
 /* ================== /FOOTER STYLES ================== */
