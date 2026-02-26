@@ -56,9 +56,17 @@ ol {
 
 .benefits-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-wrap: nowrap;
+  align-content: stretch;
+
+  /* column-gap: 20px;
+  row-gap: 40px; */
+  /* gap: 40px 20px; */
+
+  height: 500px;
 
   border: 1px solid #000000;
 }
@@ -68,11 +76,30 @@ ol {
   border: 1px solid tomato;
 }
 
-.benefits-list-item-first .benefits-list-title {
+/* .benefits-list-item:not(:nth-child(3n)) {
+  margin-right: 20px;
+}
+
+.benefits-list-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 40px;
+} */
+
+.benefits-list-item-first {
 }
 
 .benefits-list-item-second {
 }
 
 .benefits-list-item-third {
+}
+
+.block {
+  width: 100px;
+  height: 100px;
+  border: 4px solid yellowgreen;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-top: auto;
+  margin-bottom: auto;
 }
