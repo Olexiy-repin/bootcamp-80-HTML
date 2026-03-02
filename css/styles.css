@@ -87,16 +87,29 @@ body {
 /* ================== /COMMON STYLES ================== */
 
 /* ================== PAGE HEADER STYLES ================== */
+.page-header-container {
+  display: flex;
+  align-items: center;
+  column-gap: 90px;
+}
+
 .page-navigation {
   display: flex;
   align-items: center;
+  flex-grow: 1;
 }
 
 .page-logo {
+  display: flex;
+  align-items: center;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;
   letter-spacing: -0.03em;
+}
+
+.page-logo-icon {
+  margin-left: 4px;
 }
 
 .page-menu {
@@ -113,12 +126,32 @@ body {
   letter-spacing: -0.02em;
   padding-top: 30px;
   padding-bottom: 30px;
+  transition: color 250ms linear;
 }
 
 .page-menu-link:hover,
 .page-menu-link:focus {
   color: rgb(var(--accent-color));
 }
+
+.social-list {
+  display: flex;
+  column-gap: 18px;
+}
+
+.social-list-link {
+  display: block;
+  line-height: 0;
+  stroke: rgb(17 17 17);
+  fill: none;
+  transition: stroke 250ms linear;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  stroke: rgb(var(--accent-color));
+}
+
 /* ================== /PAGE HEADER STYLES ================== */
 
 /* ================== HERO STYLES ================== */
@@ -130,6 +163,8 @@ body {
   background-color: rgb(30 24 35);
   color: rgb(var(--secondary-text-color));
   margin-bottom: 50px;
+  background-image: linear-gradient(rgb(30 24 35 / 0.4), rgb(30 24 35 / 0.4)), url('../images/hero/bg.jpg');
+  background-size: cover;
 }
 
 .hero-section-container {
@@ -163,6 +198,9 @@ body {
   color: rgb(var(--secondary-text-color));
   border: none;
   border-radius: 100px;
+  transition:
+    background-color 250ms linear,
+    color 250ms linear;
 }
 
 .buy-now-btn:hover,
@@ -180,6 +218,9 @@ body {
   text-align: center;
   border: 1px solid #ffffff;
   border-radius: 100px;
+  transition:
+    border-color 250ms linear,
+    color 250ms linear;
 }
 
 .how-made-link:hover,
@@ -189,16 +230,40 @@ body {
 }
 
 .scroll-down-link {
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
   margin-left: auto;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: -0.03em;
+  transition: color 250ms linear;
 }
 
 .scroll-down-link:hover,
 .scroll-down-link:focus {
   color: rgb(var(--accent-color));
+}
+
+.scroll-down-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  fill: rgb(var(--accent-color));
+  transition:
+    background-color 250ms linear,
+    fill 250ms linear;
+}
+
+.scroll-down-link:hover .scroll-down-icon-wrapper,
+.scroll-down-link:focus .scroll-down-icon-wrapper {
+  background-color: rgb(var(--accent-color));
+  fill: #ffffff;
 }
 /* ================== /HERO STYLES ================== */
 
@@ -217,7 +282,30 @@ body {
 }
 
 .benefits-list-item {
+  position: relative;
   width: calc((100% - 2 * 88px) / 3);
+}
+
+.benefits-list-item:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  width: 1px;
+  height: 124px;
+  transform: translateY(-50%);
+  background-color: #ffffff80;
+  content: '';
+}
+
+.benefits-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin-bottom: 22px;
 }
 
 .benefits-list-title {
@@ -259,6 +347,8 @@ body {
 }
 
 .ingredients-list-item {
+  position: relative;
+  overflow: hidden;
   width: calc((100% - 3 * 24px) / 4);
   padding: 28px 32px;
   border: 1px solid rgb(var(--accent-color));
@@ -287,6 +377,62 @@ body {
   line-height: 1.3;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+}
+
+.ingredient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgb(255 255 255);
+  color: rgb(var(--primary-text-color));
+  border-radius: 15px;
+  overflow: auto;
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+}
+
+.ingredients-list-item:hover .ingredient-overlay {
+  transform: translateY(0%);
+}
+
+.ingredient-overlay-title {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.ingredient-categories {
+  display: flex;
+  column-gap: 6px;
+  margin-bottom: 14px;
+}
+
+.ingredient-categories-item {
+  font-size: 10px;
+  line-height: 1.2;
+  padding: 6px 16px;
+  border: 1px solid rgb(var(--accent-color));
+  border-radius: 35px;
+}
+
+.ingredient-categories-item:first-child {
+  background-color: rgb(var(--accent-color));
+  color: rgb(var(--secondary-text-color));
+}
+
+.ingredient-categories-item:last-child {
+  background-color: rgb(250 250 250);
+}
+
+.ingredient-description {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
 }
 /* ================== /INGREDIENTS STYLES ================== */
 
@@ -320,9 +466,23 @@ body {
 }
 
 .how-made-list-item {
+  position: relative;
   font-size: 14px;
   line-height: 1.3;
   letter-spacing: -0.02em;
+  padding-left: 16px;
+}
+
+.how-made-list-item::before {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #eceded;
+  border-radius: 50%;
+  background-color: #4c4c4c;
+  content: '';
 }
 
 .how-made-list-item:not(:last-child) {
@@ -347,12 +507,20 @@ body {
 }
 
 .reviews-list-item {
+  position: relative;
   width: calc((100% - 28px * 2) / 3);
   padding: 56px 24px 24px 24px;
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 15px;
   box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
   background-color: rgb(255 255 255);
+}
+
+.reviews-list-avatar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .reviews-list-fullname {
@@ -382,6 +550,9 @@ body {
   padding: 14px 40px;
   margin-left: auto;
   margin-right: auto;
+  transition:
+    color 250ms linear,
+    background-color 250ms linear;
 }
 
 .leave-review-btn:hover,
@@ -432,6 +603,7 @@ body {
   font-size: 14px;
   line-height: 1.3;
   letter-spacing: -0.02em;
+  transition: color 250ms linear;
 }
 
 .contact-list-link:hover,
