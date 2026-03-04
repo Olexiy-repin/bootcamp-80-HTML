@@ -5,6 +5,7 @@
   --secondary-text-color: 255 255 255;
   --accent-color: 253 146 34;
   --body-bg-color: 250 250 250;
+  --outline-color: 0 95 184;
 }
 /* ================== /VARIABLES ================== */
 
@@ -616,3 +617,197 @@ body {
 }
 
 /* ================== /FOOTER STYLES ================== */
+
+/* ================== BACKDROP WITH MODAL STYLES ================== */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms linear;
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 517px;
+  height: 794px;
+  border-radius: 15px;
+  background-color: rgb(250 250 250);
+  padding: 40px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  stroke: rgb(17 17 17);
+  line-height: 0;
+  transition: stroke 250ms linear;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  stroke: rgb(var(--accent-color));
+}
+
+.review-form-slogan {
+  max-width: 298px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+/* ================== /BACKDROP WITH MODAL STYLES ================== */
+
+/* ================== REVIEW FORM STYLES ================== */
+.review-form-field-wrapper {
+  margin-bottom: 18px;
+}
+
+.review-form-field-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: rgb(64 64 64 / 0.3);
+}
+
+.review-form-input-wrapper {
+  position: relative;
+}
+
+.review-form-input {
+  width: 100%;
+  height: 68px;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  border: 1px solid rgb(17 17 17 / 0.05);
+  border-radius: 15px;
+  padding-left: 62px;
+  background-color: transparent;
+  transition: border-color 250ms linear;
+}
+
+.review-form-input:focus {
+  outline: none;
+  border-color: rgb(var(--accent-color));
+}
+
+.review-form-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  fill: none;
+  stroke: rgb(64 64 64);
+  transition: stroke 250ms linear;
+}
+
+/* 
+.review-form-input-wrapper:focus-within .review-form-input-icon {
+  stroke: rgb(var(--accent-color));
+}
+*/
+
+.review-form-input:focus + .review-form-input-icon {
+  stroke: rgb(var(--accent-color));
+}
+
+.review-form-message {
+  width: 100%;
+  height: 137px;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  border: 1px solid rgb(17 17 17 / 0.05);
+  border-radius: 15px;
+  background-color: transparent;
+  resize: none;
+  padding: 22px 24px;
+  transition: border-color 250ms linear;
+}
+
+.review-form-message:focus {
+  outline: none;
+  border-color: rgb(var(--accent-color));
+}
+
+.review-form-message::placeholder {
+  color: rgb(64 64 64 / 0.3);
+}
+
+.review-form-checkbox-wrapper {
+  margin-bottom: 40px;
+}
+
+.review-form-checkbox-label {
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: rgba(64 64 64 / 0.6);
+}
+
+.review-form-custom-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(17 17 17 / 0.14);
+  border-radius: 6px;
+  cursor: pointer;
+  fill: transparent;
+  margin-right: 12px;
+}
+
+.review-form-policy-checkbox:checked + .review-form-checkbox-label > .review-form-custom-checkbox {
+  background-color: rgb(var(--accent-color));
+  fill: rgb(255 255 255);
+}
+
+.review-form-policy-checkbox:focus + .review-form-checkbox-label > .review-form-custom-checkbox {
+  outline: 2px solid rgb(var(--outline-color));
+}
+
+.privacy-policy-link {
+  color: rgb(var(--accent-color));
+  text-decoration: underline;
+}
+
+.review-form-submit-btn {
+  min-width: 117px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: rgb(var(--accent-color));
+  padding: 14px 40px;
+  border: none;
+  border-radius: 100px;
+  transition:
+    background-color 250ms linear,
+    color 250ms linear;
+}
+
+.review-form-submit-btn:hover,
+.review-form-submit-btn:focus {
+  background-color: rgb(252 241 224);
+  color: rgb(var(--accent-color));
+}
+
+/* ================== /REVIEW FORM STYLES ================== */
