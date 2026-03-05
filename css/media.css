@@ -1,0 +1,115 @@
+body {
+  background-color: yellowgreen;
+}
+
+/* ========== MIN-WIDTH & MAX-WIDTH ========== */
+/* 400px+ */
+/* @media (min-width: 400px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/* 400px+ */
+/* @media (width >= 400px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/* 768px+ */
+/* @media (min-width: 768px) {
+  body {
+    background-color: tomato;
+  }
+} */
+
+/* 768px+ */
+/* @media (width >= 768px) {
+  body {
+    background-color: tomato;
+  }
+} */
+
+/* 0px - 767px */
+/* @media (max-width: 767px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/* 0px - 767px */
+/* @media (width <= 767px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/* 0px - 400px */
+/* @media screen and (max-width: 400px) {
+  body {
+    background-color: tomato;
+  }
+} */
+
+/* 0px - 400px */
+/* @media (width <= 400px) {
+  body {
+    background-color: tomato;
+  }
+} */
+
+/* ========== TYPES ========== */
+/* 
+  all
+  screen 
+  print
+*/
+/* @media screen {
+  .section-title {
+    margin-bottom: 40px;
+  }
+}
+
+@media print {
+  .menu {
+    display: none;
+  }
+
+  .page-btn {
+    display: none;
+  }
+
+  .page-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+} */
+
+/* ========== AND ========== */
+/* 
+  768px+ - true
+  0px - 1199px - true
+*/
+/* @media screen and (min-width: 768px) and (max-width: 1167px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/* @media screen and (768px <= width <= 1167px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/* ========== OR ========== */
+/* 
+  0px - 767px - false
+  1168px+ - true
+*/
+/* @media screen and (max-width: 767px), screen and (min-width: 1168px) {
+  body {
+    background-color: tomato;
+  }
+} */
