@@ -14,7 +14,100 @@
 
   <body>
     <div class="container">
-      <img src="../images/retina-picture/img-mobile.jpg" alt="retina image" />
+      <ul>
+        <li>
+          <picture>
+            <!-- DESKTOP -->
+            <source
+              srcset="../images/retina-picture/img-desktop.jpg 1x, ../images/retina-picture/img-desktop@2x.jpg 2x"
+              media="(min-width: 1200px)"
+            />
+
+            <!-- TABLET -->
+            <source
+              srcset="../images/retina-picture/img-tablet.jpg 1x, ../images/retina-picture/img-tablet@2x.jpg 2x"
+              media="(min-width: 768px)"
+            />
+
+            <img
+              srcset="../images/retina-picture/img-mobile@2x.jpg 2x"
+              src="../images/retina-picture/img-mobile.jpg"
+              alt="retina image"
+            />
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <!-- DESKTOP -->
+            <source
+              srcset="
+                ../images/retina-picture/avif/img-desktop.avif    1x,
+                ../images/retina-picture/avif/img-desktop@2x.avif 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/avif"
+            />
+            <source
+              srcset="
+                ../images/retina-picture/webp/img-desktop.webp    1x,
+                ../images/retina-picture/webp/img-desktop@2x.webp 2x
+              "
+              media="(min-width: 1200px)"
+              type="image/webp"
+            />
+            <source
+              srcset="../images/retina-picture/img-desktop.jpg 1x, ../images/retina-picture/img-desktop@2x.jpg 2x"
+              media="(min-width: 1200px)"
+            />
+
+            <!-- TABLET -->
+            <source
+              srcset="
+                ../images/retina-picture/avif/img-tablet.avif    1x,
+                ../images/retina-picture/avif/img-tablet@2x.avif 2x
+              "
+              media="(min-width: 768px)"
+              type="image/avif"
+            />
+            <source
+              srcset="
+                ../images/retina-picture/webp/img-tablet.webp    1x,
+                ../images/retina-picture/webp/img-tablet@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="../images/retina-picture/img-tablet.jpg 1x, ../images/retina-picture/img-tablet@2x.jpg 2x"
+              media="(min-width: 768px)"
+            />
+
+            <!-- MOBILE -->
+            <source
+              srcset="
+                ../images/retina-picture/avif/img-mobile.avif    1x,
+                ../images/retina-picture/avif/img-mobile@2x.avif 2x
+              "
+              media="(max-width: 767px)"
+              type="image/avif"
+            />
+            <source
+              srcset="
+                ../images/retina-picture/webp/img-mobile.webp    1x,
+                ../images/retina-picture/webp/img-mobile@2x.webp 2x
+              "
+              media="(max-width: 767px)"
+              type="image/webp"
+            />
+
+            <img
+              srcset="../images/retina-picture/img-mobile@2x.jpg 2x"
+              src="../images/retina-picture/img-mobile.jpg"
+              alt="retina image"
+            />
+          </picture>
+        </li>
+      </ul>
     </div>
   </body>
 </html>
