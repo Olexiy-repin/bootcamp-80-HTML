@@ -30,7 +30,7 @@
         <nav class="page-navigation">
           <a class="page-logo" href="./index.html">
             <em>SIMPLY</em>&nbsp;CHOCOLATE
-            <svg class="page-logo-icon" width="24" height="24">
+            <svg class="page-logo-icon">
               <use href="./images/icons.svg#icon-logo"></use>
             </svg>
           </a>
@@ -46,6 +46,11 @@
             </li>
           </ul>
         </nav>
+        <button class="mobile-menu-open-btn" type="button">
+          <svg class="mobile-menu-open-btn-icon" width="28" height="28">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
         <ul class="social-list">
           <li class="social-list-item">
             <a href="" class="social-list-link">
@@ -358,7 +363,7 @@
     </footer>
 
     <!-- BACKDROP WITH MODAL -->
-    <div class="backdrop is-open">
+    <div class="backdrop">
       <div class="modal">
         <button class="modal-close-btn" type="button">
           <svg class="modal-close-btn-icon" width="28" height="28">
@@ -378,7 +383,7 @@
                 minlength="2"
                 required
               />
-              <svg class="review-form-input-icon" width="24" height="24">
+              <svg class="review-form-input-icon">
                 <use href="./images/icons.svg#icon-user"></use>
               </svg>
             </div>
@@ -387,7 +392,7 @@
             <label class="review-form-field-label" for="user-email">Email</label>
             <div class="review-form-input-wrapper">
               <input class="review-form-input" id="user-email" type="email" name="user_email" required />
-              <svg class="review-form-input-icon" width="24" height="24">
+              <svg class="review-form-input-icon">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </div>
@@ -404,7 +409,7 @@
                 title="xxx-xxx-xx-xx"
                 required
               />
-              <svg class="review-form-input-icon" width="24" height="24">
+              <svg class="review-form-input-icon">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </div>
@@ -434,11 +439,54 @@
                   <use href="./images/icons.svg#icon-checkmark"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the <a class="privacy-policy-link" href="">Privacy Policy</a>
+              <span class="review-form-checkbox-label-text">
+                I accept the terms and conditions of the
+                <a class="privacy-policy-link" href="">Privacy Policy</a>
+              </span>
             </label>
           </div>
           <button class="review-form-submit-btn" type="submit">Send</button>
         </form>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+      <div class="container mobile-menu-container">
+        <button class="mobile-menu-close-btn" type="button">
+          <svg class="mobile-menu-close-btn-icon" width="28" height="28">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu-nav">
+          <ul class="mobile-menu-nav-list">
+            <li class="mobile-menu-nav-list-item">
+              <a class="mobile-menu-nav-list-link" href="./index.html">Home</a>
+            </li>
+            <li class="mobile-menu-nav-list-item">
+              <a class="mobile-menu-nav-list-link" href="#making-process">How it’s made?</a>
+            </li>
+            <li class="mobile-menu-nav-list-item">
+              <a class="mobile-menu-nav-list-link" href="#reviews">Chocolate is loved</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="mobile-menu-social-list">
+          <li class="mobile-menu-social-list-item">
+            <a href="" class="mobile-menu-social-list-link">
+              <svg class="mobile-menu-social-list-icon" width="22" height="22">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-list-item">
+            <a href="" class="mobile-menu-social-list-link">
+              <svg class="mobile-menu-social-list-icon" width="22" height="22">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </body>
